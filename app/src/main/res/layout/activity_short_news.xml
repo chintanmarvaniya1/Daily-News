@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clShortNews"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShortNews">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="Image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ig_splash_screen" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDateCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivImage"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:width="150dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingTop="4dp"
+                android:layout_marginLeft="12dp"
+                android:textAppearance="@style/Text3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/tvDateOfPublish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="24 Oct 22 | 4:00"
+                android:layout_marginRight="12dp"
+                android:textAppearance="@style/Text3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/light_black"
+            android:layout_below="@+id/clDateCategory"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"/>
+
+        <TextView
+            android:id="@+id/tvSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableRow"
+            android:layout_marginTop="10dp"
+            android:text="NDTV"
+            android:textAppearance="@style/Text4"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSource"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="12dp"
+            android:textAppearance="@style/Text5"
+            android:textAllCaps="true"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Text6"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:textAlignment="center"/>
+
+
+    </RelativeLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/light_blue"
+        android:contentDescription="@string/share"
+        android:src="@drawable/ic_baseline_share"
+        tools:ignore="RtlHardcoded" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+    <!-- <ImageView
+         android:id="@+id/ivImage"
+         android:layout_width="match_parent"
+         android:layout_height="400dp"
+         android:scaleType="centerCrop"
+         android:src="@drawable/ig_splash_screen"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:id="@+id/constraintLayout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/ivImage">
+
+         <TextView
+             android:id="@+id/tvCategory"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="12dp"
+             android:width="150dp"
+             android:ellipsize="end"
+             android:lines="1"
+             android:paddingTop="4dp"
+             android:textAppearance="@style/Text3"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+
+         <TextView
+             android:id="@+id/tvDateOfPublish"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginRight="12dp"
+             android:paddingTop="4dp"
+             android:textAppearance="@style/Text3"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toEndOf="@+id/tvCategory"
+             app:layout_constraintTop_toTopOf="parent" />
+     </androidx.constraintlayout.widget.ConstraintLayout>
+
+     <TableRow
+         android:id="@+id/tableRow"
+         android:layout_width="match_parent"
+         android:layout_height="2dp"
+         android:background="@color/light_black"
+         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent" />
+
+     <TextView
+         android:id="@+id/tvSource"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:gravity="center"
+         android:textAppearance="@style/Text4"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+     <TextView
+         android:id="@+id/tvTitle"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:textAppearance="@style/Text5"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/tvSource" />
+
+     <TextView
+         android:id="@+id/tvDescription"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:textAppearance="@style/Text6"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+     <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id="@+id/floatingActionButton2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="end|bottom"
+         android:background="@color/light_blue"
+         android:contentDescription="@string/share"
+         android:src="@drawable/ic_baseline_share"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent" />
+
+         -->

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FullNews"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbFullNews"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/light_blue"
+        android:layout_weight="10"
+        app:titleTextAppearance="@style/Text7"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_baseline_arrow"
+        app:title="Top News"/>
+
+    <WebView
+        android:id="@+id/wvArticle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="115"/>
+
+
+
+</LinearLayout>

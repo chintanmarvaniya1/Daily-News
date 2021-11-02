@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivNewsImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/img"
+            tools:contentDescription="TODO"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvNewsSource"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:width="150dp"
+                android:ellipsize="end"
+                android:lines="1"
+                tools:text="NDTV News"
+                android:paddingTop="4dp"
+                android:layout_marginLeft="8dp"
+                android:textAppearance="@style/Text1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:layout_marginRight="8dp"
+                android:textAppearance="@style/Text1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="18 Oct 22 || 4:00" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvHeadline"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:paddingTop="4dp"
+            android:ellipsize="end"
+            android:lines="3"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:paddingBottom="8dp"
+            android:textAppearance="@style/Text2"
+            tools:text="IPL 2021: Rishabh Pant will captain Delhi Capitals in the upcoming season of the Indian Premier League with Shreyas Iyer out injured." />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

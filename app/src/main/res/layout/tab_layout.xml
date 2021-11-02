@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tlMyTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/red"
+        app:tabSelectedTextColor="@color/red"
+        app:tabTextColor="@color/light_blue"
+        app:tabTextAppearance="@style/tabLayout"
+        app:tabMode="auto">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tiHeadlines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOP NEWS" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tiBusiness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BUSINESS" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tiSport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SPORT" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tiEntertainment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ENTERTAIMENT" />
+
+
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tiTechnology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Technology" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+</LinearLayout>
