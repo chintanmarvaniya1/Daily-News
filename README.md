@@ -15,11 +15,6 @@ This is a <b>kotlin</b> based modern news application which uses NewsAPI to fetc
 
 <img src="./ScreenShot/Short News.jpg" width="250">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <img src="./ScreenShot/Share News.jpg" width="250">
 
-### Demo Video
-<pre><a href="https://github.com/ishandeveloper/Newsify-App/raw/master/app.apk">Demo Video</a></pre>
-
-
-
 ###  Built With
 
 * RecyclerView
